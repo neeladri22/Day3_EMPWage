@@ -10,7 +10,7 @@ namespace Day3_EMPWage
     {
         static void Main(string[] args)
         {
-            
+            CheckEmployeePresentOrAbsent();
         }
         public static void CheckEmployeePresentOrAbsent() {
 
