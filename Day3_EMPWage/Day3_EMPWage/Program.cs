@@ -10,20 +10,28 @@ namespace Day3_EMPWage
     {
         static void Main(string[] args)
         {
-            CheckEmployeePresentOrAbsent();
+            CalculateDailyEmployeeWage();
         }
-        public static void CheckEmployeePresentOrAbsent() {
+        public static void CalculateDailyEmployeeWage() {
 
-            Console.WriteLine("Welcome to Employee pay roll");
+            Console.WriteLine("Calculate the daily Employee wage");
             Random random = new Random();
             int number = random.Next(0, 2);
+            int wagePerHour = 20;
+            int fullyDayHour = 8;
+            int totalWage = 0;
+
 
             if (number == 0)
             {
                 Console.WriteLine("Employee is Absent");
             }
-            else {
+            else 
+            {
                 Console.WriteLine("Employee is Present");
+                totalWage = wagePerHour * fullyDayHour;
+                Console.WriteLine("Employee's total wage is :"+ totalWage);
+
             }
         }
     }
