@@ -10,28 +10,33 @@ namespace Day3_EMPWage
     {
         static void Main(string[] args)
         {
-            CalculateDailyEmployeeWage();
+            AddParttimeEmployeeAndWage();
         }
-        public static void CalculateDailyEmployeeWage() {
+        public static void AddParttimeEmployeeAndWage() {
 
-            Console.WriteLine("Calculate the daily Employee wage");
+            Console.WriteLine("Add part time Employee wage");
             Random random = new Random();
-            int number = random.Next(0, 2);
+            int number = random.Next(0, 3);
             int wagePerHour = 20;
             int fullyDayHour = 8;
+            int partTimeHour = 4;
             int totalWage = 0;
-
 
             if (number == 0)
             {
                 Console.WriteLine("Employee is Absent");
             }
-            else 
+            else if(number == 1)
             {
                 Console.WriteLine("Employee is Present");
                 totalWage = wagePerHour * fullyDayHour;
-                Console.WriteLine("Employee's total wage is :"+ totalWage);
-
+                Console.WriteLine("Full time Employee's total wage is :" + totalWage);
+            }
+            else 
+            {
+                Console.WriteLine("Employee is Present and Part time Employee");
+                totalWage = wagePerHour * partTimeHour;
+                Console.WriteLine("Part time Employee's total wage is :" + totalWage);
             }
         }
     }
