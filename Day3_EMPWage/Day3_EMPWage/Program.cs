@@ -22,22 +22,25 @@ namespace Day3_EMPWage
             int partTimeHour = 4;
             int totalWage = 0;
 
-            if (number == 0)
+            switch (number) 
             {
-                Console.WriteLine("Employee is Absent");
+                case 0: 
+                    Console.WriteLine("Employee is Absent");
+                    break;
+
+                case 1:
+                    Console.WriteLine("Employee is Present");
+                    totalWage = wagePerHour * fullyDayHour;
+                    Console.WriteLine("Full time Employee's total wage is :" + totalWage);
+                    break;
+
+                case 2:
+                    Console.WriteLine("Employee is Present and Part time Employee");
+                    totalWage = wagePerHour * partTimeHour;
+                    Console.WriteLine("Part time Employee's total wage is :" + totalWage);
+                    break;
             }
-            else if(number == 1)
-            {
-                Console.WriteLine("Employee is Present");
-                totalWage = wagePerHour * fullyDayHour;
-                Console.WriteLine("Full time Employee's total wage is :" + totalWage);
-            }
-            else 
-            {
-                Console.WriteLine("Employee is Present and Part time Employee");
-                totalWage = wagePerHour * partTimeHour;
-                Console.WriteLine("Part time Employee's total wage is :" + totalWage);
-            }
+       
         }
     }
 }
