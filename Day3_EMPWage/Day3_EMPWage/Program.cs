@@ -10,9 +10,9 @@ namespace Day3_EMPWage
     {
         static void Main(string[] args)
         {
-            AddParttimeEmployeeAndWage();
+            SwitchCaseForEmployeeAndWage();
         }
-        public static void AddParttimeEmployeeAndWage() {
+        public static void SwitchCaseForEmployeeAndWage() {
 
             Console.WriteLine("Add part time Employee wage");
             Random random = new Random();
